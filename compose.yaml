@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: theagiledad
+      POSTGRES_PASSWORD: theagilepass
+      POSTGRES_DB: the_agile_dad_dev
+    ports:
+      - 5432:5432
+    volumes:
+      - ./init-scripts:/docker-entrypoint-initdb.d
