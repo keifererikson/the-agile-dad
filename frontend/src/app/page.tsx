@@ -1,12 +1,14 @@
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1>The Agile Dad</h1>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        theagiledad.dev 2025
-      </footer>
+    <div className="flex flex-col items-center justify-between py-8">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">The Agile Dad</h1>
+        <p className="text-xl mb-6">A no-nonsense fitness and weight loss tracker for busy dads.</p>
+        <div className="flex justify-center gap-4">
+          <button className="btn btn-primary">Get Started</button>
+          <button className="btn btn-outline">Learn More</button>
+        </div>
+      </div>
     </div>
   );
 }
