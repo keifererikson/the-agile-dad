@@ -29,10 +29,30 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased grid min-h-screen grid-rows-[auto_1fr_auto]`}
       >
         <TopNavbar />
-        <main className="container mx-auto px-4">{children}</main>
-        <footer className="flex flex-wrap items-center justify-center gap-[24px] p-4">
-          theagiledad.dev 2025
-        </footer>
+        <div className="drawer mx-auto max-w-[100rem] lg:drawer-open">
+          <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+          <div className="drawer-content flex flex-col min-h-screen">
+            <main className="p-6">{children}</main>
+          </div>
+          <div className="drawer-side bg-base-200">
+            <label
+              htmlFor="my-drawer"
+              aria-label="close sidebar"
+              className="drawer-overlay"
+            ></label>
+            <ul className="menu w-64 p-4">
+              <li>
+                <a href="#">Link 1</a>
+              </li>
+              <li>
+                <a href="#">Link 2</a>
+              </li>
+              <li>
+                <a href="#">Link 3</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </body>
     </html>
   );
